@@ -1,0 +1,58 @@
+<configs>
+	<!--  This tells SDX to add to the Items.xml -->
+	<config name="items">	
+		<!-- This tells SDX to add the following Items to the bottom of the Items list -->
+		<append xpath="/items">	
+
+<!-- RJ Holy Hand Grenade -->
+<item id="" name="theHolyHandgrenadeOfAntioch">
+	<property name="CustomIcon" value="theHolyHandgrenadeOfAntiochIcon"/>
+	<property name="DescriptionKey" value="theHolyHandgrenadeOfAntiochDesc"/>
+	<property name="Meshfile" value="#holyHandgrenade?holyHandgrenadePrefab"/>
+	<property name="HoldType" value="40"/>
+	<property name="Class" value="ItemClassTimeBomb"/>
+	<property name="Material" value="organic"/>
+	<property name="Weight" value="5"/>
+	<property name="Stacknumber" value="1"/>
+	<property name="Explosion.BlockDamage" value="10000"/>
+	<property name="Explosion.EntityDamage" value="8000"/>
+	<property name="Explosion.ParticleIndex" value="1"/>
+	<property name="Explosion.RadiusBlocks" value="35"/>
+	<property name="Explosion.RadiusEntities" value="20"/>
+	<property name="Explosion.BlastPower" value="700"/>
+	<property name="Explosion.DamageBonus.stone" value="90"/>
+	<property name="Explosion.DamageBonus.metal" value="90"/>
+	<property name="Explosion.DamageBonus.earth" value="90"/>
+	<property name="Explosion.DamageBonus.water" value="90"/>
+	<property name="Explosion.DamageBonus.wood" value="90"/>
+	<property name="FuseTime" value="20000"/>
+	<property name="ExplodeOnHit" value="true"/>
+	<property name="EconomicValue" value="5"/>
+	<property name="SellableToTrader" value="false"/>
+	<property class="Action0">
+		<property name="Class" value="ThrowAway"/>
+		<property name="Delay" value="1.2"/>
+		<property name="Explosion.ParticleIndex" value="1"/>
+		<property name="Throw_strength_default" value="14"/>
+		<property name="Throw_strength_max" value="50"/>
+		<property name="Max_strain_time" value="1.5"/>
+		<property name="Sound_start" value="heavenVoice"/>
+	</property>
+	<property name="ThrowableDecoy" value="true"/>
+	<property name="DropScale" value="3"/>
+	<property name="Group" value="Ammo/Weapons"/>
+	<property name="CraftingSkillGroup" value="craftSkillScience"/>
+</item>
+		</append>
+	</config>
+	
+	<config name="sounds">
+    <append xpath="/sounds">
+    <!-- RJ Holy Hand Grenade Heaven Voice-->
+    <SoundDataNode name="heavenVoice"> <AudioSource name="Sounds/AudioSource_Interact"/>
+	<AudioClip ClipName="#heavenVoice?holyHandgrenadeOfAntiochChoir"/>
+	<LocalCrouchVolumeScale name="1.0"/> <CrouchNoiseScale name="0.5"/> <NoiseScale name="1"/> <MaxVoices name="3"/> <MaxRepeatRate name="0.01"/> </SoundDataNode>
+	
+    </append>
+	</config>
+</configs>
